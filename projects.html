@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Home | YUSOL LAB</title><style>
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Projects & Skills | YUSOL LAB</title><style>
 :root{
   --ice:#e3f2fd; --sky:#90caf9; --blue:#2196f3; --navy:#174ea6;
   --deep:#0b2d5c; --white:#f8fbff; --text:#10243e; --muted:#58708d;
@@ -90,7 +90,7 @@ footer{padding:50px 24px;background:#092b55;color:#dcecff;text-align:center}
 .page-main > section:first-child{padding-top:82px}
 .navlinks a.active{background:var(--ice);color:var(--navy);font-weight:800}
 @media(max-width:850px){.navlinks a{padding:12px 14px}.page-main > section:first-child{padding-top:72px}}
-</style></head><body data-page="home"><nav class="nav">
+</style></head><body data-page="projects"><nav class="nav">
  <div class="nav-inner">
   <a class="logo" href="index.html">YUSOL LAB</a>
   <button class="menu" type="button" onclick="toggleMenu()" aria-label="메뉴 열기">☰</button>
@@ -103,32 +103,28 @@ footer{padding:50px 24px;background:#092b55;color:#dcecff;text-align:center}
    <a data-page="contact" href="contact.html">✉️ Contact</a>
   </div>
  </div>
-</nav><main class="page-main"><header class="hero" id="home">
- <div class="hero-grid">
-  <div>
-   <div class="eyebrow">Personal Research Portfolio · High School 2</div>
-   <h1>유솔이의<br>연구소</h1>
-   <h2>호기심에서 시작해, 기술로 답을 찾아가는 과정.</h2>
-   <p>황유솔의 개인 연구 포트폴리오입니다. 반도체·AI·전자공학에 대한 관심을 바탕으로 문제를 발견하고, 직접 탐구하고, 기술로 해결하는 과정을 기록합니다.</p>
-   <div class="cta"><button type="button" class="btn btn-primary" id="researchBtn">연구 기록 보기 →</button><button type="button" class="btn btn-ghost" id="happyBtn">💙 행복 충전</button></div>
-   <div class="counter" id="happyCount">TODAY'S HAPPINESS CHARGE : 0</div>
-   <div class="fun-result" id="happyResult">버튼을 눌러 오늘의 연구소 응원을 받아보세요.</div>
+</nav><main class="page-main"><section id="projects">
+ <div class="container">
+  <div class="section-head"><div><div class="section-no">03 / PROJECTS & SKILLS</div><h2>내가 직접 탐구한 것들.</h2></div></div>
+  <p class="lead">반도체·AI·Arduino를 중심으로 실제 수행한 탐구와 제작 경험을 기록합니다. 특히 싱가포르 AI 국제교류 프로젝트는 실제 활동 기록과 전체 프로젝트 개요로 바로 연결할 수 있습니다.</p>
+  <div class="projects" style="margin-top:28px">
+   <div class="card project" onclick="openProject('01','AI × Semiconductor','AI 기반 반도체 자동 설계(Auto Chip Design)에 관심을 가지고 EDA, 머신러닝, GNN·강화학습 등의 활용 가능성을 탐구한 프로젝트입니다.')"><span class="num">PROJECT 01</span><div><h3>AI × Semiconductor</h3><p>AI 기반 반도체 자동 설계 탐구</p></div><span class="tag">Research</span></div>
+   <div class="card project" onclick="openProject('02','Arduino Engineering','초음파 센서, LED, 서보모터, 조이스틱 등을 활용해 자동 제어와 미로 탈출 등 여러 공학 프로젝트를 제작하고 작동 원리를 설명했습니다.')"><span class="num">PROJECT 02</span><div><h3>Arduino Engineering</h3><p>센서 · 제어 · 하드웨어 제작</p></div><span class="tag">Hardware</span></div>
+   <div class="card project" onclick="openProject('03','빛을 잡아라!','랜덤하게 켜지는 LED를 빠르게 누르는 순발력 게임을 제작했습니다. 조건문·반복문·랜덤 함수와 입력/출력 제어를 활용했습니다.')"><span class="num">PROJECT 03</span><div><h3>빛을 잡아라!</h3><p>Arduino 기반 순발력 게임</p></div><span class="tag">Coding</span></div>
+   <div class="card project" onclick="openProject('04','Solar Still','태양에너지를 이용해 물을 증발·응축시키는 Solar Still의 원리를 탐구하고 물 정화 기술로서의 활용 가능성을 살펴본 프로젝트입니다.')"><span class="num">PROJECT 04</span><div><h3>Solar Still</h3><p>태양에너지 · 물 정화 탐구</p></div><span class="tag">Science</span></div>
+   <div class="card project" onclick="openProject('05','AI & Data','Python과 머신러닝을 활용해 이미지 분류, 데이터 분석 및 예측 프로젝트를 수행하며 데이터가 결과에 미치는 영향을 경험했습니다.')"><span class="num">PROJECT 05</span><div><h3>AI & Data</h3><p>Python · 머신러닝 · 데이터 분석</p></div><span class="tag">AI</span></div>
+   <div class="card project" onclick="openProject('06','Semiconductor & Environment','반도체 공정에서 발생할 수 있는 환경 문제에 관심을 가지고 AI와 공학 기술을 활용한 해결 방향을 탐구했습니다.')"><span class="num">PROJECT 06</span><div><h3>Semiconductor & Environment</h3><p>친환경 반도체 기술 탐구</p></div><span class="tag">Future</span></div>
+   <div class="card project" onclick="openProject('07','Singapore AI Exchange','인천광역시교육청 AI기반 문제해결 국제교류 프로젝트(싱가포르)에 참여해 싱가포르 학생들과 AI 기반 문제해결 활동과 교류를 진행한 프로젝트입니다.')"><span class="num">PROJECT 07</span><div><h3>Singapore AI Exchange</h3><p>싱가포르 AI 국제교류 프로젝트</p></div><div><span class="tag">Global</span><a class="btn btn-primary" style="display:inline-block;margin-top:12px;font-size:12px;padding:9px 12px" href="https://sites.google.com/ssem.re.kr/tldrkvhfm2025/%ED%99%88?authuser=0" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">내 프로젝트 보기 ↗</a><a class="btn btn-ghost" style="display:inline-block;margin-top:12px;font-size:12px;padding:9px 12px" href="https://sites.google.com/view/2025singa/%ED%95%99%EC%83%9D%EB%93%A4%EC%9D%98-%EC%8A%A4%ED%86%A0%EB%A6%AC/11?authuser=0" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">활동 전체 보기 ↗</a></div></div>
   </div>
-  <div class="lab-panel">
-   <div class="eyebrow">LAB SYSTEM</div>
-   <div class="status"><span>RESEARCHER</span><b>HWANG YUSOL</b></div>
-   <div class="status"><span>STATUS</span><b class="green">● ONLINE</b></div>
-   <div class="status"><span>FIELD</span><b>SEMICONDUCTOR / AI</b></div>
-   <div class="status"><span>GRADE</span><b>HIGH SCHOOL 2</b></div>
-   <div class="terminal">
-    &gt; initializing curiosity...<br>
-    &gt; loading projects...<br>
-    &gt; connecting engineering...<br>
-    &gt; research status: ACTIVE_
-   </div>
+  <h3 style="margin:55px 0 18px;color:var(--deep)">TOOLS / SKILLS</h3>
+  <div class="skills">
+   <div class="skill"><strong>Python</strong><span>데이터 처리 · AI</span><div class="progress"><span style="width:78%"></span></div></div>
+   <div class="skill"><strong>Arduino IDE</strong><span>센서 · 제어 · 제작</span><div class="progress"><span style="width:85%"></span></div></div>
+   <div class="skill"><strong>Machine Learning</strong><span>분류 · 예측 · 모델링</span><div class="progress"><span style="width:68%"></span></div></div>
+   <div class="skill"><strong>Data Analysis</strong><span>분석 · 시각화 · 해석</span><div class="progress"><span style="width:72%"></span></div></div>
   </div>
  </div>
-</header><section><div class="container"><div class="section-head"><div><div class="section-no">01 / HOME</div><h2>연구소의 기록을 따라가보세요.</h2></div></div><div class="grid"><a class="card" href="profile.html"><span class="tag">PROFILE</span><h3>나는 어떤 사람인가?</h3><p>호기심, 탐구, 창의성, 소통, 공학을 중심으로 나의 태도와 관심을 소개합니다.</p></a><a class="card" href="projects.html"><span class="tag">PROJECTS</span><h3>무엇을 직접 해봤는가?</h3><p>반도체·AI·Arduino를 중심으로 수행한 탐구와 제작 경험을 확인할 수 있습니다.</p></a><a class="card" href="growth.html"><span class="tag">GROWTH</span><h3>어떻게 성장했는가?</h3><p>학교 활동과 역할, 시행착오, 배운 점을 시간의 흐름에 따라 기록했습니다.</p></a><a class="card" href="playlab.html"><span class="tag">PLAY LAB</span><h3>잠깐 쉬어가기</h3><p>고양이, 물리, 독서 등 연구소 주인장의 쓸데있고 재미있는 TMI를 만나보세요.</p></a></div></div></section></main><footer>YUSOL LABORATORY · Semiconductor · AI · Engineering · Future<br><small>Built as a personal student portfolio.</small></footer><script>const cheers=["오늘도 충분히 잘하고 있어! 💙","작은 호기심이 큰 발견이 될 거야. 🔬","실패는 데이터일 뿐! 다시 해보자. 💡","오늘의 질문이 내일의 연구가 될 수 있어.","천천히 해도 괜찮아. 중요한 건 계속 탐구하는 것! 🌊","너의 아이디어에는 아직 발견되지 않은 가능성이 있어."];
+</section></main><footer>YUSOL LABORATORY · Semiconductor · AI · Engineering · Future<br><small>Built as a personal student portfolio.</small></footer><div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div class="section-no" id="modalNo"></div><h2 id="modalTitle"></h2><p id="modalText"></p><button class="btn btn-primary" onclick="closeModal()">확인</button></div></div><script>const cheers=["오늘도 충분히 잘하고 있어! 💙","작은 호기심이 큰 발견이 될 거야. 🔬","실패는 데이터일 뿐! 다시 해보자. 💡","오늘의 질문이 내일의 연구가 될 수 있어.","천천히 해도 괜찮아. 중요한 건 계속 탐구하는 것! 🌊","너의 아이디어에는 아직 발견되지 않은 가능성이 있어."];
 function happy(){const count=Number(localStorage.getItem("happyCount")||0)+1;localStorage.setItem("happyCount",count);const c=document.getElementById("happyCount"),r=document.getElementById("happyResult");if(c)c.textContent=`TODAY'S HAPPINESS CHARGE : ${count}`;if(r)r.textContent=cheers[Math.floor(Math.random()*cheers.length)]}
 const happyBtn=document.getElementById("happyBtn");if(happyBtn){const count=Number(localStorage.getItem("happyCount")||0),c=document.getElementById("happyCount");if(c)c.textContent=`TODAY'S HAPPINESS CHARGE : ${count}`;happyBtn.addEventListener("click",happy);happyBtn.addEventListener("touchend",e=>{e.preventDefault();happy()},{passive:false})}
 const researchBtn=document.getElementById("researchBtn");if(researchBtn)researchBtn.addEventListener("click",()=>location.href="projects.html");
